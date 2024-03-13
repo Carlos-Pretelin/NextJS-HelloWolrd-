@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 import NewsItemProps from "@/types/types";
+import Link from "next/link";
 
-
-const NewsItem = ({item}: {item:NewsItemProps}) => {
+const NewsItem = ({ item }: { item: NewsItemProps }) => {
   return (
-    <div>{item.title}</div>
-  )
-}
+    <div className="newsItem" key={item.id}>
+      <Link key={item.id} href={`/article/${item.id}`} passHref>        
+        <h3>{item.headLine}</h3>
+        <p>{item.body}</p>
+      </Link>
+    </div>
+  );
+};
 
-export default NewsItem
+export default NewsItem;
