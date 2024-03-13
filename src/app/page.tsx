@@ -1,11 +1,11 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from "react";
+import HomePage from "../components/views/HomePage";
 
 export default function Home() {
+  
   return (
     <main>
-      <h1>HOME PAGE</h1>
-      <p>My name is Carlos Pretelin, im a Frontend Developer!</p>
+      <HomePage />
     </main>
   );
 }
