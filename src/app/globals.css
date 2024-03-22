@@ -105,3 +105,105 @@ a {
     color-scheme: dark;
   }
 }
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10% 0;
+}
+.form-container p {
+  color: red;
+}
+
+/* Title styles */
+.form-container h1 {
+  margin-bottom: 2rem;
+}
+
+/* Input field styles */
+.form-container input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container input::placeholder {
+  color: #888;
+}
+
+/* Button styles */
+.form-container button {
+  width: 316px; /* Adjusted to match the input fields with padding */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Link styles */
+.form-container a {
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-container a:hover {
+  color: #0056b3;
+}
+
+/* .register-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+
+/* PROFILE PAGE */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  color: #fff;
+}
+
+.bio {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #bbb;
+}
+
+.contact {
+  font-size: 1em;
+  color: #888;
+}

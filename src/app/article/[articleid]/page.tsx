@@ -1,27 +1,22 @@
 import React from "react";
-import NewsItemProps from "@/types/types";
-import { fetchArticle } from "@/utils/utils";
-
+import NewsItemProps from "@/types";
+import { fetchArticleData } from "@/utils";
+import ArticlePage from "@/components/views/ArticlePage";
 
 const Article = async ({ params }: { params: { articleid: string } }) => {
-
   const id = params.articleid;
-  const data: NewsItemProps = await fetchArticle(id)
 
-  if (!data){
-    return <h1>Error fetching data!</h1>
+  if (!id) {
+    return <h1>The id is invalid!</h1>;
   }
 
-  return (
-    <>
-      <h1>This is the article Page</h1>
-      <div className="article">
-        <h2 className="article-title">{data?.headLine}</h2>
-        <p className="article-content">{data?.body}</p>
-        <p className="article-info">Written by Carlos Pretelin on 01/01/2024</p>
-      </div>
-    </>
-  );
+  const data: NewsItemProps = await fetchArticleData(id);
+
+  if (!data) {
+    return <h1>Error fetching data!</h1>;
+  }
+
+  return <ArticlePage data={data} />;
 };
 
 export default Article;

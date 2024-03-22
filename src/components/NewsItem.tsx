@@ -1,5 +1,5 @@
 import React from "react";
-import NewsItemProps from "@/types/types";
+import NewsItemProps from "@/types";
 import Link from "next/link";
 
 const NewsItem = ({ item }: { item: NewsItemProps }) => {
