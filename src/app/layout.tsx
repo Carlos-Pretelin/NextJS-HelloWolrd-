@@ -19,10 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <h1>Menu</h1>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/users/carlos"}>Carlos</Link>
-        <Link href={"/login"}>Login</Link>
-        HomePage
+        <Link href={"/"}>Home </Link>
+        <Link href={"/login"}>Log in</Link>
         {children}
         </body>
     </html>

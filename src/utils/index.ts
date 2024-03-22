@@ -16,6 +16,8 @@ export const fetchArticleData = async (ARTICLE_API_URL: string): Promise<any> =>
     const response = await fetch(ARTICLE_API_URL);
     const data = await response.json();
     if (response.ok) {
+      console.log(data)
+
       return data;
     } else {
       throw new Error(data.message || "Error fetching article");
